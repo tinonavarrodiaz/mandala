@@ -1,0 +1,27 @@
+@font-face {
+    font-family: 'Fabrica';
+    src: url('Fabrica.woff2') format('woff2'),
+        url('Fabrica.woff') format('woff');
+    font-weight: normal;
+    font-style: normal;
+    font-display: swap;
+}
+
+@font-face {
+    font-family: 'Tahoma';
+    src: url('Tahoma.woff2') format('woff2'),
+        url('Tahoma.woff') format('woff');
+    font-weight: normal;
+    font-style: normal;
+    font-display: swap;
+}
+
+@font-face {
+    font-family: 'Source Sans Pro';
+    src: url('SourceSansPro-Regular.woff2') format('woff2'),
+        url('SourceSansPro-Regular.woff') format('woff');
+    font-weight: normal;
+    font-style: normal;
+    font-display: swap;
+}
+
