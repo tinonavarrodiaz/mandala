@@ -106,6 +106,25 @@ menuTequilasLink.addEventListener('click', function (e) {
 
   _initialVariables.dd.classList.toggle('menu-tequila-active');
 });
+var stayInTouch = (0, _initialVariables.id)('stay-in-touch');
+var stayInTouchClose = (0, _initialVariables.id)('stay-in-touch-close');
+var stayInTouchForm = (0, _initialVariables.id)('stay-in-touch-form');
+console.log(stayInTouch, stayInTouchClose, stayInTouchForm);
+
+var stayInTouchRemove = function stayInTouchRemove(el) {
+  el.classList.add('hide');
+  setTimeout(function () {
+    el.remove();
+  }, 300);
+};
+
+stayInTouchClose.addEventListener('click', function (e) {
+  stayInTouchRemove(stayInTouch);
+});
+stayInTouchForm.addEventListener('submit', function (e) {
+  e.preventDefault();
+  stayInTouchRemove(stayInTouch);
+});
 
 },{"./modules/active-menu":2,"./modules/dots-slider":3,"./modules/initialVariables":4,"./modules/isMobile":5,"./modules/loading":6,"./modules/scrollSmooth":7}],2:[function(require,module,exports){
 "use strict";
