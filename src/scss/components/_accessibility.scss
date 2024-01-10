@@ -1,0 +1,275 @@
+.accessibility {
+  $size: 40px;
+  position: fixed;
+  width: $size;
+  height: $size;
+  bottom: 0 !important;
+  // bottom: 57.5px;
+  left: $size*1.1;
+  background-color: var(--color-accessibility-main);
+  //background: transparent;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  border-radius: 50%;
+  cursor: pointer;
+  z-index: calc(var(--z-modal) - 50);
+  transform: translateY(-57.5px) !important;
+  @include to(l) {
+    left: 20px;
+    bottom: 20px;
+  }
+
+  svg {
+    width: 60%;
+    height: 60%;
+    fill: #fff;
+  }
+}
+
+.refresh {
+  align-self: center;
+  background-color: var(--body-bg);
+  border: none;
+  line-height: 2.5em;
+  margin-bottom: 1em;
+  padding: 0 2em;
+  border-radius: 1.25em;
+  color: var(--color-main);
+  transition: transform .3s;
+
+  &::before {
+    top: 3px !important;
+    font-size: 1.2em;
+    margin-right: .5em;
+    opacity: .75;
+  }
+
+  &:hover {
+    transform: scale(1.05);
+  }
+}
+
+.accessibility-menu {
+  $size: 1.5em;
+  border-radius: .5rem;
+  overflow: hidden;
+  width: 90% !important;
+  max-width: 450px;
+  height: 80vh;
+  background: linear-gradient(var(--color-accessibility-main) 35vh, #fff 35vh);
+  position: fixed;
+  //padding: 1em;
+  z-index: 3000000;
+  left: 3vw;
+  bottom: 3vh;
+  padding-top: $size * 4;
+  padding-bottom: 1.3em;
+  display: flex;
+  flex-direction: column;
+  transform: translateX(-150%);
+  transition: all .5s;
+
+  &.right {
+    left: unset;
+    right: 3vw;
+    transform: translateX(150%);
+    height: 80vh;
+    max-width: 450px;
+  }
+
+  &.active {
+    transform: translateX(0);
+  }
+
+  &__title {
+    text-align: center;
+    color: #fff;
+  }
+
+  &__header {
+
+    position: absolute;
+    background-color: var(--color-accessibility-accent);
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    height: $size * 2;
+    width: 100%;
+    top: 0;
+
+    span {
+      display: block;
+      width: $size * 1.2;
+      height: $size * 1.2;
+      line-height: $size * 1.2;
+      background-color: var(--color-accessibility-body);
+      text-align: center;
+      border-radius: 50%;
+      cursor: pointer;
+
+    }
+
+  }
+
+  &__body {
+    $margin: 3em;
+    border-radius: .5rem;
+    width: 90%;
+    margin: auto auto 0;
+    text-align: center;
+    padding: 1.3em;
+    background-color: var(--color-accessibility-body);
+    height: 59vh;
+    overflow-y: auto;
+  }
+}
+
+.switch-label {
+  $size: 1.5em;
+  cursor: pointer;
+  width: $size * 2;
+  height: $size;
+  background-color: #bbb;
+  display: block;
+  border-radius: $size;
+  position: relative;
+  //box-shadow:  0 0 0 1px #999 inset;
+  transition: background-color .3s;
+
+  &::after {
+    content: '';
+    display: block;
+    position: absolute;
+    width: $size;
+    height: $size;
+    border-radius: 50%;
+    background: rgba(#fff, 1);
+    left: 0;
+    top: 0;
+    transition: left.3s;
+  }
+}
+
+.switch:checked+.switch-label {
+  background: #146FF8;
+
+  &:after {
+    left: 50%;
+    background: darken(#146FF8, 15);
+  }
+}
+
+.switch {
+  display: none;
+}
+
+.accessibility-menu__action {
+  @extend %list-style;
+
+  p {
+    margin-bottom: 1em;
+  }
+
+  li {
+    padding: .5em 1em;
+    margin-bottom: .75em;
+    background-color: #f2f7fa;
+
+  }
+
+  .acsb-profile {
+    height: auto;
+    width: 100%;
+    display: grid;
+    grid-template-columns: auto 1fr;
+    grid-gap: 2em;
+    align-items: center;
+
+    span {
+      display: block;
+      margin: 0;
+
+      &:last-child {
+        font-size: .9em;
+      }
+    }
+  }
+
+  .acsb-profile-description {
+    font-size: .9em;
+    overflow: hidden;
+    max-height: 0;
+    transition: max-height .3s, opacity .3s;
+    visibility: hidden;
+    opacity: 0;
+
+    &.is-visible {
+      padding: .5em 1em;
+      opacity: 1;
+      max-height: 100px;
+      visibility: visible;
+
+    }
+  }
+
+  .acsb-profile-content {
+    cursor: pointer;
+
+    &:hover,
+    &.selected {
+      color: #146FF8
+    }
+  }
+}
+
+.ref {
+  position: absolute;
+  z-index: 50;
+  background: #fff;
+  display: block;
+  padding: 0 1em;
+  height: 100%;
+  max-height: 90%;
+  overflow-y: auto;
+  font-size: .9em;
+  opacity: 0;
+  visibility: hidden;
+  transition: all .5s;
+  width: calc(100% - 2em);
+  left: 50%;
+  transform: translateX(-50%);
+
+  &.show {
+    opacity: 1;
+    visibility: visible;
+  }
+
+  &__close {
+    font-size: 1.3em;
+    cursor: pointer;
+    //position: absolute;
+    //top: .5em;
+    //left: .5em;
+  }
+
+  &__header {
+    text-align: center;
+
+    ul {
+      @extend %list-style;
+      display: flex;
+      justify-content: space-around;
+      font-size: .8em;
+      margin-bottom: 1rem;
+      opacity: .75;
+    }
+  }
+}
+.mside{
+  @include to(l){
+    height: 100%;
+    width: 100%;
+    align-items: center;
+  }
+}

@@ -1,0 +1,119 @@
+.story {
+  > main {
+    padding-top: calc(var(--header-height)+ 50px);
+  }
+  .section__top {
+    margin-bottom: 8vh;
+  }
+  .section__top,
+  .section__bottom {
+    padding-left: 10vw;
+    padding-right: 10vw;
+  }
+  h1 {
+    position: relative;
+    left: 60%;
+    z-index: 50;
+    .Craftsmanship & {
+      left: unset;
+    }
+  }
+  .img-home2 {
+    width: 85%;
+    margin-top: -20px;
+    margin-left: 15%;
+  }
+  .story__text {
+    width: 70%;
+    font-size: 1.5em;
+    margin-top: 1em;
+  }
+  .sb-component {
+    display: grid;
+    //grid-gap: 5vw;
+    grid-template-columns: repeat(2, 1fr);
+  }
+  .section__bottom {
+    position: relative;
+    //padding-top: 8vh;
+    //min-height: 150vh;
+    //align-items: end;
+    overflow: hidden;
+    @include from(l) {
+      padding-bottom: 8vh;
+    }
+    .Craftsmanship & {
+      min-height: unset;
+      overflow: initial;
+    }
+    &--img {
+      display: flex;
+      justify-content: center;
+
+      img {
+        width: 60%;
+      }
+    }
+    &--text {
+      display: flex;
+      justify-content: flex-end;
+      align-items: flex-end;
+    }
+    .text2 {
+      width: 80%;
+      //transform: translateY(50%);
+    }
+  }
+}
+.img-mandal {
+  position: absolute;
+  bottom: 5%;
+  left: 5%;
+  //clip-path: polygon(15% 0, 100% 0, 100% 60%, 15% 60%);
+  //transform: translateY(40%) translateX(-30%);
+  transform-origin: center;
+  transform: rotate(0) scale(0.7);
+  animation: gir 60s infinite linear;
+  opacity: 1;
+  @keyframes gir {
+    to {
+      transform: rotate(360deg) scale(0.7);
+    }
+  }
+}
+.section__video {
+  height: auto !important;
+  min-height: unset;
+  display: flex;
+  padding: 0;
+  flex-direction: column;
+  align-items: center;
+  justify-content: flex-start;
+  margin-top: 10vh;
+  margin-bottom: 10vh;
+  h2 {
+    margin-bottom: 5vh;
+  }
+  .video {
+    max-width: 800px;
+    margin: 0 auto;
+  }
+}
+.craftsmanship .img-mandala,
+.story .img-mandala {
+  top: 6vh !important;
+  right: 8vw !important;
+  //transform: scale(5) !important;
+  //display: none;
+}
+.map_canvas {
+  div {
+    max-width: 100% !important;
+  }
+}
+.story .section__bottom {
+  @include from(l) {
+    margin-top: 15vh !important;
+    margin-bottom: 15vh !important;
+  }
+}

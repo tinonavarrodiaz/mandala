@@ -1,0 +1,27 @@
+extends ../config/template
+append config
+  -pageTitle = 'Our Team'
+  -pageDescription = 'Tequila Mandala'
+  -pageImage = ''
+
+block main
+  //- .right.fix
+  //-   p SIP OUR MONTHLY STORIES<br>BY STAYING CONNECTED
+  section.section.section__top.team
+    .teamContainer
+      each person, i in team
+        figure.team-item(data-aos="zoom-in" data-aos-delay=`${i*100}` data-aos-offset="50")
+          img(src=person.img alt=person.name )
+
+          figcaption()=person.name
+          p()=person.cargo
+    .sectionText
+      h1(data-aos="fade-left") A TEAM OF EXPERTS.<br>BEST-IN-CLASS.<br>UNIQUELY DEFINED<br/>AND SKILLED.
+      //- h2.wow.animate__animated.animate__fadeInLeft Who we are
+      //- each person, i in team
+      //-   figure.team(data-aos="fade-up")
+      //-     .f-img
+      //-       img(src=person.img alt=person.name)
+      //-     figcaption=person.name
+      //-     p=person.cargo
+

@@ -1,0 +1,52 @@
+.nav-tequilas#nav-tequilas
+  .tequilas-container
+    ul.menu-tequilas
+      li.menu-tequilas__item
+        a(href="products.html?prod=Tequila-Blanco").menu-tequilas__link
+          //img( srcset="img/new/bottles/blanco.png, img/new/bottles/menu-mobile/blanco " sizes="(min-width:1024px), (max-width:1023px)" src="img/new/bottles/blanco.png")
+          picture
+            source( srcset= "img/new/bottles/menu-mobile/02_Mandala_Bco.png" media="(max-width:1023px)")
+            img(src="img/new/bottles/02_Mandala_Bco.png")
+          span Tequila Blanco
+      li.menu-tequilas__item
+        a(href="products.html?prod=Tequila-Reposado").menu-tequilas__link
+          picture
+            source( srcset= "img/new/bottles/menu-mobile/04_Mandala_Repo.png" media="(max-width:1023px)")
+            img(src="img/new/bottles/04_Mandala_Repo.png")
+          span Tequila Reposado
+      li.menu-tequilas__item
+        a(href="products.html?prod=Tequila-Anejo").menu-tequilas__link
+          picture
+            source( srcset= "img/new/bottles/menu-mobile/06_Mandala_Anejo.png" media="(max-width:1023px)")
+            img(src="img/new/bottles/06_Mandala_Anejo.png")
+          span Tequila Añejo
+      li.menu-tequilas__item
+        a(href="products.html?prod=Tequila-Extra-Anejo").menu-tequilas__link
+          picture
+            source( srcset= "img/new/bottles/menu-mobile/03_Mandala_Extraanejo.png" media="(max-width:1023px)")
+            img(src="img/new/bottles/03_Mandala_Extraanejo.png")
+          span Tequila Extra Añejo
+      li.menu-tequilas__item
+        a(href="limited-edition.html").menu-tequilas__link
+          picture
+            source( srcset= "img/new/bottles/menu-mobile/laparquita.png" media="(max-width:1023px)")
+            img(src="img/new/bottles/laparquita1.jpg")
+          span.le All Limited Edition Bottles
+
+include top-bar
+.main-header__content.animate__animated.animate__fadeInDown#header
+  .mside(style="display:flex;")
+    a(href="./").main-logo: include main-logo
+    include main-menu
+  .buy-container
+    a(href="#" target="_blank", class="buyOnline" id="buyOnline") Buy Online
+    ul.buy-List#buy-List
+      each item in store
+        li: a(href=item.url target="_blank", class="store")=item.name
+      //- li: a(href="https://www.oldtowntequila.com/brands/Mandala.html" target="_blank", class="store") Old Town Tequila
+      //- li: a(href="https://www.oldtowntequila.com/brands/Mandala.html" target="_blank", class="store") Old Town Tequila
+      //- li: a(href="https://www.oldtowntequila.com/brands/Mandala.html" target="_blank", class="store") Old Town Tequila
+      //- li: a(href="https://www.oldtowntequila.com/brands/Mandala.html" target="_blank", class="store") Old Town Tequila
+      //- li: a(href="https://www.oldtowntequila.com/brands/Mandala.html" target="_blank", class="store") Old Town Tequila
+      //- li: a(href="https://www.oldtowntequila.com/brands/Mandala.html" target="_blank", class="store") Old Town Tequila
+      //- li: a(href="https://www.oldtowntequila.com/brands/Mandala.html" target="_blank", class="store") Old Town Tequila

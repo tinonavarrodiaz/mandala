@@ -1,0 +1,27 @@
+.main-footer__data
+  .main-footer__logo
+    img(src="img/logo1.svg", alt="alt")
+  ul.main-footer__menu
+    each page in pages
+      li.footer__menu__item(itemprop="url")
+        a.footer__menu__link(href=page.url itemprop="name")= page.title
+        //- if (page.title==="Find a Retailer")
+        //-   a.footer__menu__link(href=page.url itemprop="name") Find a Retailer
+        //- else
+        //-   a.footer__menu__link(href=page.url itemprop="name")= page.title
+
+  .main-footer__social
+    p Sip our monthly stories by staying connected
+    ul.social-networks
+      li
+        a(href="https://m.facebook.com/Tequilamandala/" target="_blank")
+          img(src="img/icons/facebook.svg", alt="alt")
+      li
+        a(href="https://www.instagram.com/tequilamandala/" target="_blank")
+          img(src="img/icons/instagram.svg", alt="alt")
+      li
+        a(href="https://www.twitter.com/tequilamandala/" target="_blank")
+          img(src="img/icons/twitter.svg", alt="alt")
+      li
+        a(href="https://www.tiktok.com/@tequilamandala" target="_blank")
+          img(src="img/icons/tiktok.svg", alt="alt")

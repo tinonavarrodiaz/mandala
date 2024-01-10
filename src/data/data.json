@@ -1,0 +1,189 @@
+{
+  "team": [
+    {
+      "img": "img/team/Kirk_011a.jpg",
+      "name": "Kirk Cartozian",
+      "cargo": "Operating Partner / CEO"
+    },
+    {
+      "img": "img/team/Craig_011a.jpg",
+      "name": "Craig Cartozian",
+      "cargo": "Operating Partner / COO"
+    },
+    {
+      "img": "img/team/Heidi_011a.jpg",
+      "name": "Heidi Wilde",
+      "cargo": "Operating Partner / CFO"
+    },
+    {
+      "img": "img/team/Humberto_011a.jpg",
+      "name": "Humberto Ibarra",
+      "cargo": "Founding Partner / CMO"
+    },
+    {
+      "img": "img/team/Joel_1.jpg",
+      "name": "Joel García Barreto",
+      "cargo": "Founding Partner / Master Distiller"
+    },
+    {
+      "img": "img/team/Arturo.jpg",
+      "name": "Arturo Lomelí",
+      "cargo": "Founding Partner / México Legal"
+    }
+
+  ],
+  "limited": [
+
+    {
+      "name": "Día de Muertos\n 2018",
+      "imagenBig": "img/bottles/disademuertos2019-80.jpg"
+    },
+    {
+      "name": "Talismán\n 2019",
+      "imagenBig": "img/bottles/talisman_1-80.jpg"
+    },
+    {
+      "name": "Día de Muertos\n 2020",
+      "imagenBig": "img/bottles/diademuertos2020_1-80.jpg"
+    },
+
+    {
+      "name": "Arte Huichol\n 2020",
+      "imagenBig": "img/bottles/artehuichol_1-80.jpg"
+    },
+
+    {
+      "name": "Día de Muertos\n 2022",
+      "imagenBig": "img/bottles/laparquita1.jpg",
+      "description": "<span>The Day of the Dead (Día de los Muertos) is one of the most important estivities in Mexico because Mexicans honor their dead with a joyful and positive celebration, now turned into a fantastic popular holiday. The conception of life and death, as well as all the traditions and ancient beliefs that revolve around the subject, is a characteristic that distinguishes Mexicans from the rest of the world. On November 1st and 2nd, Mexicans go to the cemeteries and make offerings to celebrate these deaths.</span><span>The Day of the Dead (Día de los Muertos) celebration is divided into two parts: November 1st, which is All Saints Day, celebrates all the saints who had an exemplary life. November 2nd is the actual Day of the Dead celebration at the cemetery graves, adorned in an abundance of flowers. Family and friends choose to harness and release their emotions in this extended stay, often spending the night while awaiting their dead´s soul to find their way back to earth. The goal is to remember and celebrate loved ones who are no longer with us. And that tradition continues year after year. </span>"
+    },
+
+    {
+      "name": "Love",
+      "imagenBig": "img/bottles/love.jpg",
+      "description": "<span>In 2013, Ruben Rojas traded in his suit for a paint brush, and began transforming blank walls into unique, empowering messages that today are uplifting communities and challenging the public to create new dialogues. As an artist, muralist and activist, Ruben has a mission to ignite creativity and to inspire others to see the world through the lens of love. <br/> <br/> By using the urban landscape as his canvas, Ruben encourages communities to change for the better through optimism and collaboration. These once vacant walls are now vibrant reminders that inspire those who see them to dream big, feel beautiful, live in possibility, and to love. Ruben’s murals can be seen in cities across the country and around the world from Paris to New York, and Florida to Mississippi. Ruben’s portfolio of work extends beyond murals. He is a TED speaker, helping to spread the message of art creating impact, a product designer and also a corporate consultant. Ruben works with companies to help businesses give back, to enhance workspaces and to raise awareness on important issues. Past campaigns include clients such as NFL, BMW, American Express, & GT’s Kombucha. Ruben is also the co-founder of a nonprofit dedicated to putting an end to blighted walls and fixtures all over the world by empowering artists, encouraging social responsibility, and instilling community pride. </span>"
+    }
+  ],
+  "store": [
+    {
+      "name" : "Reserve Bar",
+      "url" : "https://www.reservebar.com/collections/tequila-mandala?utm_source=digital&utm_medium=partner&utm_campaign=website"
+    },
+    {
+      "name" : "Tarzana Wine & Spirits",
+      "url" : "https://tarzanawineandspirits.com/shop?ch-query=mandala"
+    },
+    {
+      "name" : "Old Town Tequila",
+      "url" : "https://www.oldtowntequila.com/brands/Mandala.html"
+    },
+    {
+      "name" : "Shop SK",
+      "url" : "https://shopsk.com/search?type=product&q=Tequila+Mandala"
+    },
+    {
+      "name" : "Allocated Liquor",
+      "url" : "https://www.allocatedliquor.com/search?type=product&q=Tequila%20Mandala*"
+    },
+    {
+      "name" : "Emilios Beverage Warehouse",
+      "url" : "https://emiliosbev.com/search.php?search_query=Mandala&section=product"
+    },
+    {
+      "name" : "Beverly Hills Liquor & Wine",
+      "url" : "https://www.beverlyhillsliquorandwine.com/catalogsearch/result/?q=Mandala"
+    },
+    {
+      "name" : "Mel & Rose",
+      "url" : "https://www.melandrose.com/istar.asp?a=29&search=Mandala"
+    },
+    {
+      "name" : "Mission",
+      "url" : "https://www.missionliquor.com/search?q=Tequila+Mandala"
+    },
+    {
+      "name" : "Sipsy",
+      "url" : "https://sipsy.com/collections/tequila-mandala"
+    }
+
+  ],
+  "distributorsbystate":[
+    {
+      "state": "Arizona",
+      "name": "Kilkenny Wine Group",
+      "phone": "(602) 884-7330",
+      "address": "3020 N. 33rd Drive, Phoenix, AZ 85017",
+      "email": "alfonso@kilkennywinegroup.com"
+    },
+    {
+      "state": "California",
+      "name": "Park Street Imports",
+      "phone": "",
+      "address": "",
+      "email": "info@tequilamandala.com"
+    },
+    {
+      "state": "Florida",
+      "name": "Park Street Imports",
+      "phone": "",
+      "address": "",
+      "email": "florders@parkstreet.com"
+    },
+    {
+      "state": "Indiana",
+      "name": "Johnson Brothers Distributors",
+      "phone": "(317) 667-0230",
+      "address": "5337 W. 78th St., Indianapolis, IN 46268",
+      "email": "in_customerservice@johnsonbrothers.com"
+    },
+    {
+      "state": "Iowa",
+      "name": "ABD State of Iowa",
+      "phone": "(512) 281-7400",
+      "address": "1918 SE Hulsizer Road, Ankeny, IA 5002",
+      "email": "connelly@iowaabd.com"
+    },
+    {
+      "state": "Nevada",
+      "name": "Cork Distributors",
+      "phone": "(702) 485-3894",
+      "address": "950 Pilot Rd, Ste E, Las Vegas, NV 89119  ",
+      "email": "orders@corklv.com"
+    },
+    {
+      "state": "New Jersey",
+      "name": "Park Street Imports",
+      "phone": "",
+      "address": "",
+      "email": "info@tequilamandala.com"
+    },
+    {
+      "state": "New York",
+      "name": "Park Street Imports",
+      "phone": "",
+      "address": "",
+      "email": "info@tequilamandala.com"
+    },
+    {
+      "state": "North Carolina",
+      "name": "ABC Commission North Carolina",
+      "phone": "(919) 779-0700",
+      "address": "400 East Tryon Road Raleigh NC 27610",
+      "email": "sporders@abc.nc.gov"
+    },
+    {
+      "state": "Oregon",
+      "name": "",
+      "phone": "",
+      "address": "",
+      "email": "olcc.specialorder@oregon.gov"
+    },
+    {
+      "state": "Texas",
+      "name": "ATX Wholesale Liquor",
+      "phone": "512-582-0102",
+      "address": "9904 Gray Blvd, Unit D, Austin, TX 78758",
+      "email": "orders@atxliquor.com"
+    }
+  ]
+}

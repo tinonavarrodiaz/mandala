@@ -1,0 +1,98 @@
+// Typography
+$font-family: "sans-serif";
+
+$body-bg: #fff;
+$font-color: #000;
+
+$width100: calc(100vw - var(--scrollbar));
+
+:root {
+  --body-bg: #{$body-bg};
+  --font-color: #{$font-color};
+  --color: #fff;
+  &.menu-tequila-active{
+    --color: #808080;
+  }
+}
+
+:root {
+  --header-height: 115px;
+
+  @include from(l) {
+    --header-height: 140px;
+  }
+}
+
+// z-ndex
+$z-back: -10;
+$z-normal: 1;
+$z-tooltip: 10;
+$z-fixed: 100;
+$z-modal: 1000;
+
+:root {
+  --z-back: -10;
+  --z-normal: 1;
+  --z-tooltip: 10;
+  --z-fixed: 100;
+  --z-modal: 1000;
+  --marginT: 70px;
+}
+
+$images-path: "../img";
+
+$color-fisrt: #007bdf;
+$color-first-alt: #006dc6;
+$color-second: #00cbff;
+$color-second-alt: #00bff0;
+$color-third: #ff3c32;
+$color-third-alt: #ff2419;
+$color-accent: #fba905;
+$color-accent-alt: #f1a000;
+$color-dark: #282d31;
+$color-dark-alt: #141618;
+$color-border: #eeeef3;
+$color-light: #f6f6f6;
+$color-text: #000;
+$color-text-light: #babdbf;
+$color-body-bg: #fff;
+$color-accessibility-main: #146FF8;
+$color-accessibility-accent: darken(#146FF8, 10);
+$color-accessibility-body: #ffffff;
+
+
+$firstColor: $color-fisrt;
+$firstColorAlt: $color-first-alt;
+$secondColor: $color-second;
+$secondColorAlt: $color-second-alt;
+$thirdColor: $color-third;
+$thirdColorAlt: $color-third-alt;
+$accentColor: $color-accent;
+$accentColorAlt: $color-accent-alt;
+$darkColor: $color-dark;
+$darkColorAlt: $color-dark-alt;
+$borderColor: $color-border;
+$textColor: $color-text;
+$bodyBg: $color-body-bg;
+
+:root {
+  --color-main: #{$color-fisrt};
+  --color-fisrt: #{color-fisrt};
+  --color-first-alt: #{color-first-alt};
+  --color-second: #{color-second};
+  --color-second-alt: #{color-second-alt};
+  --color-third: #{color-third};
+  --color-third-alt: #{color-third-alt};
+  --color-accent: #{color-accent};
+  --color-accent-alt: #{color-accent-alt};
+  --color-dark: #{color-dark};
+  --color-dark-alt: #{color-dark-alt};
+  --color-border: #{color-border};
+  --color-light: #{color-light};
+  --color-text: #{color-text};
+  --color-text-light: #{color-text-light};
+  --color-body-bg: #{color-body-bg};
+  --color-accessibility-main: #{$color-accessibility-main};
+  --color-accessibility-accent: #{$color-accessibility-accent};
+  --color-accessibility-body: #{$color-accessibility-body};
+}

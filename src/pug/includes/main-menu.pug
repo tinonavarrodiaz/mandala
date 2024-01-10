@@ -1,0 +1,13 @@
+nav.main-nav(itemscope itemtype="http://schema.org/SiteNavigationElement" role="navigation")#main-nav
+  .toggle-menu.menu#toggle
+    include ../icons/icon-nav
+  ul.main-menu.sweepDown#main-menu
+    each page in pages
+      if page.title === 'Tequilas'
+        li.main-menu__item#submenu-link
+          a.main-menu__link(href="#" itemprop="name").scroll#submenu-link= page.title
+
+
+      else
+        li.main-menu__item(itemprop="url")
+          a.main-menu__link(href=page.url itemprop="name").scroll= page.title

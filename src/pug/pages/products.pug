@@ -1,0 +1,31 @@
+extends ../config/template
+append config
+  -pageTitle = 'Products'
+  -pageDescription = 'Tequila Mandala'
+  -pageImage = ''
+
+block main
+  section.section.products__containers
+    //- a.arrowLeft#left
+    //-   img(src="img/arrowP.svg")
+    //- a.arrorRight#right
+    //-   img(src="img/arrowP.svg")
+    article.tequila-data#tequilaData
+      h1#tequila-name
+      p.agave100 100% Agave Azul
+      p.tequila-description#tequila-description
+      p.tequila-features
+        span.feature Color:
+        span#tequila-color
+      p.tequila-features
+        span.feature Aroma:
+        span#tequila-aroma
+      p.tequila-features
+        span.feature Taste:
+        span#tequila-taste
+      p.tequila-features
+        span.feature Aging:
+        span#tequila-aging
+
+    article.tequila-img
+      img#tequila-img

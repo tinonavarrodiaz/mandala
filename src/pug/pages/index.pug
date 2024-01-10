@@ -1,0 +1,69 @@
+extends ../config/template
+append config
+  -pageTitle = 'Home'
+  -pageDescription = 'Tequila Mandala'
+  -pageImage = ''
+
+block main
+  section.section.home
+    .slider#slider
+    h1.fadeInLeft A TRUE <br>ARTISANAL TEQUILA
+    footer.footer-home.animate__animated.animate__fadeIn
+      .left
+        p Scroll
+      .center
+        p.center__text Dedicated to those who demand the extraordinary and special.
+        ul.dots
+          li.dots__item.active
+          li.dots__item
+          li.dots__item
+      .right.right-msg
+        p SIP OUR MONTHLY STORIES<br>BY STAYING CONNECTED
+  img(src="img/mandala_new.png", alt="alt").mandala-aside
+  section.section.home2#scene
+    //h2.section-title.parallax_scroll(data-depth="0.2") HANDCRAFTED
+    //.img
+    img(src="img/image02.jpg", alt="alt" data-aos="fade-left").img-home2
+    p.home2__text(data-aos="fade-right") Award-winning Tequila, made of 100% agave azul. A balanced and refined flavor defines each version of Mandala, with a composition of subtle and individual notes, creating harmony in every step of the process.
+  section.section.home3
+    img(src="img/mandala_new.png").img-mandala.m1#img-mandala1
+    //img(src="img/mandala2.png").img-mandala.m2#img-mandala2
+    //img(src="img/mandala3.png").img-mandala.m3#img-mandala3
+    .home3__container(data-aos="fade-right")
+      img(src="img/tequila-home3.jpg", alt="alt")
+      .home3__text
+        .cont
+          h3 CRAFTMANSHIP
+          p No bottle of Mandala is identical, all are hand made and hand painted to create a beautiful and unique piece of art.
+        a(href="./craftsmanship.html") Learn more
+    p.hash-tag(data-aos="zoom-in") #SIPMANDALA
+    .instagramContainer
+      <!-- LightWidget WIDGET --><script src="https://cdn.lightwidget.com/widgets/lightwidget.js"></script><iframe src="https://cdn.lightwidget.com/widgets/88e2c120650d5e1b9ca03ef0915235dc.html" scrolling="no" allowtransparency="true" class="lightwidget-widget" style="width:100%;border:0;overflow:hidden;"></iframe>
+  //footer.main-footer#main-footer
+  //    include ../includes/footer
+
+
+
+
+  script.
+      $(function() {
+        $('#slider').vegas({
+          slides: [
+            {src: 'img/Mandala01.jpg'},
+            {src: 'img/Mandala02.jpg'},
+            {src: 'img/Mandala03.jpg'}
+          ],
+          slide: 0,
+          overlay: false,
+          transition: 'fade',
+          animation: 'random',
+          preload: false,
+          timer: false,
+          color: '#000',
+          delay: 4800,
+          overlay: true,
+          animation: 'kenburns'
+        });
+      });
+      // var scene = document.getElementById('scene');
+      // var parallaxInstance = new Parallax(scene);

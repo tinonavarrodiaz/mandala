@@ -1,0 +1,33 @@
+extends ../config/template
+append config
+  -pageTitle = 'Craftsmanship'
+  -pageDescription = 'Tequila Mandala'
+  -pageImage = ''
+
+block main
+  .right.fix
+    p SIP OUR MONTHLY STORIES<br>BY STAYING CONNECTED
+  section.section.section__top.craft
+    h1.wow.animate__animated.animate__fadeInUp(data-aos="fade-left") EVERY BOTTLE IS A<br/>TRUE PIECE OF ART
+    img(src="img/image09.jpg", alt="alt" data-aos="fade-right").wow.animate__animated.animate__fadeIn
+
+    p.story__text(style="margin-top:3em" data-aos="fade-right") Made in ceramic at high temperature in a very traditional way and painted by hand with colors that represent the delicacy of the Mexican culture and technique shared from generation to generation.
+
+  section.section.section__bottom
+    .sb-component
+      .section__bottom--img
+        img.story_img(src="img/image03.jpg", alt="alt" data-aos="fade-right")
+      .section__bottom--text
+        img(src="img/mandala_new.png").img-mandala.m1#img-mandala1
+        p.story__text.text2(data-aos="fade-left") To keep representing the diversity and history of México, Tequila Mandala rotates twice a year different artists with their own proposals for our Special Edition ceramic bottles. We want to become a platform for their creativity at an international level and true ambassadors of our country's culture.
+
+
+  section.section.section__video
+    h2(data-aos="fade-right") Take a look at the first step of the process.
+
+    //- video.video(controls data-aos="fade-left")
+    //-   source(src="https://tinonavarrodiaz.github.io/tequilamandala/assets/video/video.mp4" type="video/mp4")
+
+    <video class="video" controls="" data-aos="fade-left" name="media"><source src="https://tinonavarrodiaz.github.io/tequilamandala/assets/video/video.mp4" type="video/mp4"></video>
+    //- .video.ed-video
+    //-   <iframe src="https://www.youtube.com/embed/iyHZpIVEvWA" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>

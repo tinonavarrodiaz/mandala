@@ -1,0 +1,30 @@
+extends ../config/template
+append config
+  -pageTitle = 'Contact'
+  -pageDescription = 'Tequila Mandala'
+  -pageImage = ''
+
+block main
+
+  section.section.contact__container
+    .sectionTextContact
+      h1(data-aos="fade-left") FEEL FREE TO ASK ANY QUESTION.
+    form(action="./php/send-form.php" method="post").contactForm#contactForm
+      .col-2 
+        .input-group(data-aos="fade-right")
+          label(for="name") FIRST NAME
+          input(type="text" name="name" id="name" required pattern="^[A-Za-zÑñÁáÉéÍíÓóÚúÜü\\s]+$")
+        .input-group(data-aos="fade-right" data-aos-delay="50")
+          label(for="surname") SURNAME
+          input(type="text" name="surname" id="surname" required pattern="^[A-Za-zÑñÁáÉéÍíÓóÚúÜü\\s]+$")
+      .input-group(data-aos="fade-right" data-aos-delay="100")
+        label(for="phone") TELEPHONE
+        input(type="text" name="phone" id="phone" required pattern="^[0-9]{10}")
+      .input-group(data-aos="fade-right" data-aos-delay="150")
+        label(for="email") EMAIL
+        input(type="text" name="email" id="email" required pattern="^[a-z0-9]+(\\.[_a-z0-9]+)*@[a-z0-9-]+(\\.[a-z0-9-]+)*(\\.[a-z]{2,15})")
+      .input-group.textarea(data-aos="fade-right" data-aos-delay="200")
+        label(for="msg") MESSAGE
+        textarea(id="msg" name="msg" required)
+      footer.footer-form(data-aos="fade-right" data-aos-delay="250")
+        button.btn-send(type='submit') SEND YOUR MESSAGE

@@ -1,0 +1,178 @@
+.main-header {
+  .cls-1,
+  .cls-2 {
+    fill: var(--color);
+  }
+  height: var(--header-height);
+  width: $width100;
+  display: grid;
+  grid-template-rows: 36px 1fr;
+
+  position: absolute;
+  top: 0;
+  left: 0;
+  color: var(--color);
+  font-size: 13.28px;
+  z-index: 1500;
+  .top-bar {
+    @extend %list-style;
+    padding-left: 70px;
+    padding-right: 45px;
+    height: auto;
+    width: 100%;
+    display: flex;
+    justify-content: flex-end;
+    align-items: center;
+    color: var(--color);
+    text-transform: uppercase;
+    border-bottom: 1px solid rgba(#fff, 0.2);
+    &__item {
+      position: relative;
+      &::after {
+        position: absolute;
+        top: 50%;
+        transform: translateY(calc(-50% - 1px)) translateX(50%);
+        right: 0;
+        content: '|';
+        opacity: 0.5;
+      }
+      &:last-child {
+        &::after {
+          display: none;
+        }
+      }
+    }
+    &__link {
+      display: block;
+      padding-right: 1.2em;
+      padding-left: 1.2em;
+      line-height: 36px;
+    }
+  }
+  &__content {
+    padding-left: 70px;
+    padding-right: 70px;
+    height: 100%;
+    width: 100%;
+    //display: none;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+
+    img,
+    svg {
+      display: block;
+      height: 65px;
+      width: auto;
+    }
+  }
+}
+.nav-tequilas {
+  position: absolute;
+  width: 100%;
+  top: 0;
+  height: calc((var(--header-height) * 2) + 3em);
+  z-index: -1;
+  background: #fff;
+  padding-top: calc(var(--header-height) - 1em);
+  color: var(--color);
+  transform: translateY(-100%);
+  transition: 0.5s transform;
+  &.active, &.show {
+    transform: translateY(0);
+  }
+}
+.menu-tequilas {
+  position: relative;
+  z-index: 1000000;
+  @extend %list-style;
+  height: calc(var(--header-height) + 1.5em);
+  width: 100%;
+  max-width: 1000px;
+  margin: 0 auto;
+  display: grid;
+  grid-template-columns: repeat(5, 1fr);
+  justify-content: center;
+  z-index: 40000 !important;
+  li {
+    height: 100%;
+    width: 100%;
+    border-right: 1px solid #fff;
+  }
+  a {
+    display: grid;
+    height: calc(100% - 0.5em);
+    grid-template-rows: 1fr 1em;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    img {
+      width: auto;
+      height: 100px;
+      margin: 0 auto;
+      transform-origin: center;
+      transform: scale(1);
+      transition: transform 0.3s;
+    }
+    &:hover {
+      text-decoration: underline;
+      img {
+        transform: scale(1.15);
+      }
+    }
+  }
+  span {
+    display: block;
+    width: 100%;
+  }
+}
+.tequilas-container {
+  background: $body-bg;
+}
+.buyOnline {
+  border: 1px solid #fff;
+  line-height: 3;
+  padding: .75em 2.5em;
+  text-transform: uppercase;
+  font-size: 1.2em;
+  position: relative;
+  overflow: hidden;
+  .mobile & {
+    font-size: 1em;
+    border-color: #01082d;
+    text-align: center;
+    max-width: 50%;
+    margin: 1em auto 1em;
+  }
+  &::before {
+    content: '';
+    position: absolute;
+    left: 0;
+    top: 0;
+    height: 100%;
+    width: 115%;
+    background: #01082d;
+    max-width: 0 !important;
+    transition: max-width 0.3s;
+    z-index: -1;
+    // visibility: hidden;
+  }
+  &:hover {
+    &:before {
+      max-width: 100% !important;
+      visibility: visible;
+    }
+  }
+}
+
+body:not(.home) {
+  .buyOnline {
+    border-color: #01082d;
+    color: #01082d;
+    &:hover {
+      color: #fff;
+      &:before {
+      }
+    }
+  }
+}

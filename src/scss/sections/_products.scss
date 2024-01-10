@@ -1,0 +1,102 @@
+.products{
+  main{
+    padding-top: var(--header-height);
+  }
+  &__containers{
+    height: calc(100vh - var(--header-height));
+    padding-right: 10vw;
+    padding-left: 10vw;
+    display: grid;
+    grid-template-columns: 55% 1fr;
+  }
+  .tequila-data{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: flex-start;
+    opacity: 0;
+    transform: translateX(-100%);
+    animation: showtd 1s .1s linear forwards;
+    @keyframes showtd {
+      to {
+        transform: translateX(0);
+        opacity: 1;
+      }
+    }
+  }
+  h1 {
+    font-family: 'Dystopian';
+    color: #2b4391;
+    font-size: 40px;
+    margin-bottom: 0;
+    text-transform: uppercase;
+  }
+  p{
+
+    font-family: 'Source Serif Pro';
+
+  }
+  .agave100{
+    font-family: 'Fabrica';
+    font-size: 18px;
+    color: #969696 ;
+    text-transform: uppercase;
+  }
+  .tequila-description{
+    $bd: 1px solid #969696;
+    width: 60%;
+    margin-top: 1em;
+    padding-top: 1.2em;
+    padding-bottom: 1.2em;
+    border-top: $bd;
+    border-bottom: $bd;
+  }
+  .feature{
+    width: 60px;
+    display: inline-block;
+    font-weight: bold;
+  }
+  .tequila-img{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    transform: translateX(100%);
+    opacity: 0;
+    animation: showB 1s .1s linear forwards;
+    @keyframes showB {
+      to {
+        transform: translateX(0);
+        opacity: 1;
+      }
+    }
+    img{
+      width: 100% ;
+      height: auto;
+    }
+  }
+}
+.products__containers{
+  position: relative;
+}
+.arrowLeft{
+  position: absolute;
+  width: 2em;
+  height: auto;
+  top: 50%;
+  left: 5%;
+  cursor: pointer;
+  transform: translateY(-50%);
+  display: none !important;
+
+}
+.arrorRight{
+  position: absolute;
+  width: 2em;
+  height: auto;
+  top: 50%;
+  right: 5%;
+  cursor: pointer;
+  transform-origin: center;
+  transform: translateY(-50%) rotate(180deg);
+  display: none !important;
+}

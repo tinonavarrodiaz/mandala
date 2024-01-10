@@ -1,0 +1,32 @@
+block config
+  include ../config/variables
+
+include ../includes/mixins
+
+
+doctype html
+html(lang="es")
+  head
+    title Access Tequila Mandala
+    meta(charset="utf-8")
+    meta(name="viewport" content="initial-scale=1.0, width=device-width")
+    meta(name="twitter:card" content="summary_large_image")
+    meta(name="twitter:site" content=twitterAccount)
+    meta(property="og:title" content=pageTitle)
+    meta(property="og:description" content=pageDescription)
+    meta(property="og:image" content=pageImage)
+    link(rel="stylesheet" href="assets/fonts/stylesheet.css")
+    link(rel="stylesheet" href="css/styles.css")
+    link(rel="shortcut icon" href="img/favicon.png")
+
+  body.access-page
+    img(src="img/logo1.svg" alt="Main Logo")
+    .access-page__cont
+      h1.main-text YOU MUST BE OF LEGAL DRINKING AGE<br>IN YOUR COUNTRY TO VISIT THIS SITE
+      button(type="button" class="btn btn-access") Enter
+    p.access-page__footer BY CLICKING "ENTER", YOU AGREE TO THE TERMS OF USE & THE PRIVACY POLICY OF THIS SITE
+
+
+    script(src="js/scripts-min.js")
+
+

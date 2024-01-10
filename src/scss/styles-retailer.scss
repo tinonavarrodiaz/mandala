@@ -1,0 +1,345 @@
+/*
+  This boilerplate is based in ITCSS and SMACSS
+*/
+
+// Variables de personalizacion de ed-grid
+
+// $breakpoints: (
+//   s: 0,
+//   m: 640px,
+//   lg: 1024px,
+//   xl: 1440px
+// );
+
+$prototype: true; // Activa los estilos de prototipado
+$dev: false; // Activa los estilos para debuggin
+$max-width: 1200px; // Ancho máximo de los contenedores ed-container y ed-grid
+$l-unit: 0.5rem; // Unidad básica de layout (para separaciones verticales, margin y padding)
+$gap: $l-unit * 4; // Separación entre columnas (2rem)
+$legacy: false; // Soporte para versiones antiguas
+$container: ed-container; // Clase para el contenedor (core flexbox)
+$item: ed-item; // Clase para los items (core flexbox)
+$max-grid-columns: 12; // Máximo número de columnas (core css grid)
+$fractions: 3 6; // Fracciones para crear columnas (core flexbox)
+
+//@import '~aos/dist/aos.css';
+//EDGrid
+@import '~ed-grid/ed-grid';
+
+// Config
+@import 'config/functions';
+@import 'config/variables';
+@import 'config/mixins';
+
+// Hamburgers Menu
+// @import "~hamburgers/dist/hamburgers.min.css";
+
+// Theme (colors and fonts)
+@import 'theme/typography';
+
+// Base and elements (generic)
+@import 'base/base';
+
+// LAYOUT
+// Escribe solo los estilos de layout (division en regiones del viewport)
+@import 'layout/layout';
+
+// MODULOS (SMACSS) O COMPONENTES (ITCSS)
+// Son los elementos de UI de tu interfaz, como botones, tablas, menus, etc.
+// Crea los archivos adicionales que necesites (uno por componente)
+@import 'components/buttons';
+@import 'components/menus';
+@import 'components/header';
+@import 'components/footer';
+@import 'components/loading';
+@import 'components/access';
+@import 'components/accessibility';
+@import 'components/retailer';
+
+.toggle-menu {
+  @include from(l) {
+    display: none;
+  }
+}
+main {
+  margin-top: var(--header-height) !important;
+}
+#map {
+  height: 60vh;
+  @include from(l) {
+    height: 100%;
+  }
+}
+@media (max-width: 1024px) {
+  h2 {
+    text-align: center;
+  }
+  main {
+    padding-left: 1em;
+    padding-right: 1em;
+    //padding-top: ;
+  }
+  .addressStore {
+    &-container {
+      //height: calc(90vh - var(--header-height));
+      display: block;
+      grid-template-columns: 1fr 70%;
+    }
+
+    background: #969696;
+    color: #fff;
+    padding: 1em 1em;
+    font-size: 1em;
+    text-align: center;
+    h1 {
+      line-height: 1.5em;
+      font-size: inherit;
+      border-bottom: 1px solid #fff;
+      font-weight: normal;
+      padding-bottom: 1em;
+    }
+
+    .directionStore {
+      margin-top: 1em;
+
+      p {
+        margin-bottom: 0;
+
+        &:first-child {
+          font-size: 1.1em;
+        }
+      }
+    }
+  }
+  .storesList {
+    //background: #fba905;
+    list-style: none;
+    padding-left: 0;
+    margin-bottom: 0;
+    text-align: center;
+    li {
+      display: none;
+    }
+  }
+  input:focus,
+  button:focus {
+    box-shadow: none;
+    outline: none;
+  }
+  .input-search-group {
+    $bdc: darken(darkgrey, 20);
+    width: 100%;
+    height: 2em;
+    display: grid;
+    grid-template-columns: 1fr;
+    grid-gap: 0.5em;
+    margin-bottom: 1.5em;
+    font-family: inherit;
+
+    input {
+      border: 1px solid $bdc;
+      line-height: 1em;
+      padding: 0 0.5em;
+      border-radius: 0.3rem;
+    }
+  }
+  .stay-in-touch {
+    display: none;
+  }
+  .main-header {
+    height: auto !important;
+    --color-header: #fff;
+  }
+  body:not(.home) {
+    .main-header {
+      position: relative;
+      --color-header: #444;
+    }
+  }
+  .main-header__content {
+    //padding: 0 1em;
+    justify-content: space-between;
+    padding: 0 2em;
+  }
+  .top-bar {
+    //@extend %list-style;
+    width: 100%;
+    display: flex;
+    justify-content: center !important;
+    padding: 0.5em 1rem 0.5em 0 !important;
+    font-size: 0.8em;
+    //border-bottom: 1px solid var(--color-header);
+    position: relative;
+
+    body:not(.home) & {
+      background-color: #333333;
+      color: #fff;
+    }
+    &::after {
+      content: ' ';
+      display: block;
+      position: absolute;
+      background: var(--color-header);
+      height: 1px;
+      width: 100%;
+      left: 0;
+      bottom: 0;
+      opacity: 0.3;
+    }
+  }
+  .ourteam h2 {
+    text-align: center;
+  }
+  .main-header__content {
+    position: relative !important;
+    height: var(--header-height);
+    display: flex;
+    width: 100%;
+    max-width: 100%;
+    min-width: 100%;
+  }
+  .main-nav {
+    position: static !important;
+  }
+  .main-menu-mobile {
+    @include edMenu(l);
+    background: #fdfdfd;
+    position: absolute !important;
+    height: auto;
+    top: var(--header-height);
+    left: 0;
+    width: 100%;
+    color: #222;
+    font-size: 1.1em;
+    overflow: hidden;
+    max-height: 0;
+    transition: max-height 0.5s;
+    &.is-active {
+      max-height: 60vh;
+      overflow-y: auto;
+    }
+  }
+  .menu-tequilas {
+    display: flex !important;
+    flex-direction: column;
+    height: auto !important;
+    overflow: hidden;
+    max-height: 0;
+    transition: max-height 0.3s;
+    &.is-active {
+      max-height: calc(3em * 5 + 0.5em * 5);
+    }
+    li {
+      height: 3em !important;
+      margin-bottom: 0.5em;
+    }
+    a {
+      height: 3em;
+      display: grid;
+      grid-template-columns: auto auto;
+      align-items: center;
+      justify-content: start;
+
+      img,
+      picture {
+        width: auto;
+        height: 3em;
+        order: 0;
+      }
+
+      span {
+        order: 1;
+      }
+    }
+  }
+  #submenu-link {
+    //opacity: .3;
+    position: relative;
+
+    &::after {
+      content: '';
+      position: absolute;
+      top: 0;
+      left: 20vh;
+      width: 1em;
+      height: 1em;
+      background: url(../img/down.svg) center no-repeat;
+      transform: translateY(1em);
+      transform-origin: center;
+      transition: transform 0.1s;
+    }
+  }
+  .toggle-menu {
+    width: 3em;
+    height: 3em;
+    svg {
+      width: 3em;
+      height: 3em;
+      fill: var(--color-header);
+    }
+  }
+  .section.home h1 {
+    font-size: 1.3em;
+    padding: 0 0.5em;
+  }
+  .main-logo {
+    height: 50%;
+    padding-left: 0em;
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+
+    svg,
+    .cls-1,
+    .cls-2 {
+      height: 80%;
+      fill: var(--color-header);
+      //height: 100%;
+    }
+  }
+  main {
+    margin-top: 0 !important;
+  }
+  .main-footer {
+    margin-top: 8em !important;
+  }
+  .main-footer__menu {
+    display: none;
+  }
+  .main-footer__social {
+    p {
+      display: none;
+    }
+  }
+  .main-footer__data {
+    grid-template-columns: 70% 1fr;
+    width: 100%;
+    padding: 2em 1em;
+  }
+  .main-footer__logo {
+    width: 50%;
+    margin-left: 0;
+    img {
+    }
+  }
+}
+.storesList li {
+  display: none;
+}
+
+.storesList li:first-child {
+  //   display: block;
+}
+#map {
+  // @include from(l) {
+  background: url('../img/map.jpg') center / cover no-repeat;
+  // }
+}
+.addressStore {
+  h1 {
+    border-color: transparent;
+  }
+  @include to(l) {
+    min-height: 199px;
+  }
+}

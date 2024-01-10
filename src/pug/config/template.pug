@@ -1,0 +1,94 @@
+block config
+  include ../config/variables
+
+include ../includes/mixins
+
+-let classHTML = pageTitle !== "Home" ? 'menu-tequila-active ' : null
+-let classBody = pageTitle.toLowerCase().replace(' ','')
+doctype html
+html(lang="en" class= `${pageTitle.replace(' ','')} ${classHTML} portrait`)
+  head
+    title= `${pageTitle} - ${siteName}`
+    meta(charset="utf-8")
+    meta(name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1")
+    meta(name="twitter:card" content="summary_large_image")
+    meta(name="twitter:site" content=twitterAccount)
+    meta(property="og:title" content=pageTitle)
+    meta(property="og:description" content=pageDescription)
+    meta(property="og:image" content=pageImage)
+    link(rel="shortcut icon", href="img/mandala.png", type="image/x-icon")
+    link(rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css")
+    link(rel="stylesheet" href="assets/css/spop.min.css")
+    link(rel="stylesheet" href="assets/fonts/stylesheet.css")
+    link(rel="stylesheet" href="assets/css/vegas.min.css")
+    link(rel="stylesheet" href="assets/css/glide.core.min.css")
+    link(rel="stylesheet" href="assets/css/glide.theme.min.css")
+    link(rel="stylesheet" href="assets/aos.css")
+    //link(rel="stylesheet" href="css/style-mobile.css" media="(max-device-width: 1024px")
+    link(rel="stylesheet" href="css/styles.css" )
+    link(rel="shortcut icon" href="img/favicon.png")
+    link(href="https://file.myfontastic.com/fRT82SLiLsyrNJ6sMbNnDF/icons.css" rel="stylesheet")
+    script(src="assets/js/jquery-3.5.1.min.js")
+    script(src="assets/js/vegas.min.js")
+    script(src="assets/js/spop.min.js")
+    //script(src="assets/js/jquery.stellar.min.js")
+    //script(src="assets/js/jquery.paroller.min.jfs")
+    script(src="https://unpkg.com/scrollreveal")
+    //script(src="assets/js/wow.js")
+    <script src="https://polyfill.io/v3/polyfill.min.js?features=default"></script>
+    <script type="text/javascript" src="//static.klaviyo.com/onsite/js/klaviyo.js?company_id=ReG5XE"></script>
+    script.
+      // var miStorage = window.sessionStorage;
+      ScrollReveal({ reset: true });
+    <script async src="https://www.googletagmanager.com/gtag/js?id=G-Q87X2G97D2"></script>
+    script.
+      window.dataLayer = window.dataLayer || [];
+      function gtag(){dataLayer.push(arguments);}
+        gtag('js', new Date());
+
+        gtag('config', 'G-Q87X2G97D2');
+    <!-- Conversion Pixel for [content]- DO NOT MODIFY --><img src="https://arttrk.com/pixel/?ad_log=referer&action=content&pixid=f7196f1f-2b2f-4155-aacf-48d8466e2990" width="1" height="1" border="0"><!-- End of Conversion Pixel -->
+  body(class=`${classBody} opacity`)
+    header.main-header#mainHeader(data-stellar-ratio="3")
+      include ../includes/header
+    main
+      block main
+    .stC
+      aside.stay-in-touch#stay-in-touch
+        .stay-in-touch__close#stay-in-touch-close
+        h2.stay-in-touch__title Stay in Touch
+        p.stay-in-touch__text Join us to be the first to receive Mandala news!
+        form(action="php/newsletter.php" method="post").stay-in-toch__form#stay-in-touch-form
+          input(name="newsletter" type="email" placeholder="Enter your email" required pattern="^[a-z0-9]+(\\.[_a-z0-9]+)*@[a-z0-9-]+(\\.[a-z0-9-]+)*(\\.[a-z]{2,15})")
+          button(type="submit") Subscribe
+
+    footer.main-footer#main-footer
+          include ../includes/footer
+    include ../components/accessibility
+    aside.accessibility#accessibility
+      include ../icons/accessibility
+    //- .loading#loading
+    //-   img(src="img/loading-page1.svg" alt="Loading Page")
+    if pageTitle === 'Retailer'
+      script(type="text/javascript" src="https://maps.googleapis.com/maps/api/js?key=AIzaSyBkJpXR9kt7WyGeeOmcG1KWsWQE1SV3DNc")
+    script(src="js/scripts-min.js")
+    script(src="assets/js/glide.min.js")
+    //- script(src="https://unpkg.com/aos@2.3.1/dist/aos.js")
+    script.
+      //- AOS.init();
+      if(document.querySelector('.glide')){
+        new Glide('.glide',{
+          type: "carousel",
+          perView:3,
+          autoplay:5000,
+          hoverpause: false,
+          breakpoints: {
+            800: {
+              perView: 2
+            },
+            600: {
+              perView: 1
+            }
+          }
+        }).mount()
+      }

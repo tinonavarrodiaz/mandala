@@ -1,0 +1,95 @@
+block config
+  include ../config/variables
+
+include ../includes/mixins
+
+-let classHTML = pageTitle !== "Home" ? 'menu-tequila-active ' : null
+-let classBody = pageTitle.toLowerCase().replace(' ','')
+doctype html
+html(lang="en" class="Retailer menu-tequila-active portrait")
+  head
+    title= `${pageTitle} - ${siteName}`
+    meta(charset="utf-8")
+    meta(name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1")
+    meta(name="twitter:card" content="summary_large_image")
+    meta(name="twitter:site" content=twitterAccount)
+    meta(property="og:title" content=pageTitle)
+    meta(property="og:description" content=pageDescription)
+    meta(property="og:image" content=pageImage)
+    link(rel="shortcut icon", href="img/mandala.png", type="image/x-icon")
+    link(rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css")
+    link(rel="stylesheet" href="assets/fonts/stylesheet.css")
+    link(rel="stylesheet" href="assets/css/vegas.min.css")
+    link(rel="stylesheet" href="assets/aos.css")
+    //link(rel="stylesheet" href="css/style-mobile.css" media="(max-device-width: 1024px")
+    link(rel="stylesheet" href="css/styles-retailer.css" )
+    link(rel="shortcut icon" href="img/favicon.png")
+    link(href="https://file.myfontastic.com/fRT82SLiLsyrNJ6sMbNnDF/icons.css" rel="stylesheet")
+    script(src="assets/js/jquery-3.5.1.min.js")
+    script(src="assets/js/vegas.min.js")
+    script(src="assets/js/jquery.stellar.min.js")
+    script(src="assets/js/jquery.paroller.min.js")
+    script(src="https://unpkg.com/scrollreveal")
+    script(src="assets/js/wow.js")
+    <script src="https://polyfill.io/v3/polyfill.min.js?features=default"></script>
+    script.
+      // var miStorage = window.sessionStorage;
+      ScrollReveal({ reset: true });
+
+
+  body(class=`retailer opacity`)
+    //script.
+      // if(document.body.classList.contains('opacity')){
+      //  location.href="./access.html"
+      // }
+    //  if (miStorage.getItem('accsess') !== 'true') {
+    //    console.log(document.body, 'hola')
+    //    if (!document.body.classList.contains('access-page')) {
+    //
+    //      location.href = "./access.html"
+    //    }
+    //  }
+    header.main-header#mainHeader(data-stellar-ratio="3")
+      include ../includes/header
+    main
+      section.section.retailer__container
+        .list-stores#listStore
+          h2 Find a Retailer
+          .input-search-group
+            input(type="search" placeholder="Enter your city or state").search#inputSearch
+            //button.search-button#buttonSearch
+            //  include ../icons/lupa
+        .addressStore-container
+          .addressStore#addresStore
+            h1.storename#storeName
+            .directionStore#directionStore
+          .map-container
+            #map
+    aside.stay-in-touch#stay-in-touch
+      .stay-in-touch__close#stay-in-touch-close
+      h2.stay-in-touch__title Stay in Touch
+      p.stay-in-touch__text Join us be the first to receive Mandala news!
+      form.stay-in-toch__form#stay-in-touch-form
+        input(name="email" type="text" placeholder="Enter your email")
+        button(type="submit") Subscribe
+
+    footer.main-footer#main-footer
+      include ../includes/footer
+    include ../components/accessibility
+    side.accessibility#accessibility
+      include ../icons/accessibility
+    //- .loading#loading
+    //-   img(src="img/loading-page1.svg" alt="Loading Page")
+    script(type="text/javascript" src="https://maps.googleapis.com/maps/api/js?key=AIzaSyBkJpXR9kt7WyGeeOmcG1KWsWQE1SV3DNc")
+    script(src="js/scripts-min.js")
+    //script.
+      // ScrollReveal().reveal('.section-title');
+      // ScrollReveal().reveal('.home2__text', { scale: .2, origin: 'left',duration: 500, distance: '100%', delay: 100, easing: 'cubic-bezier(0.5, 0, 0, 0)' });
+      // ScrollReveal().reveal('.img-home2',{origin: 'right', distance: '50%', duration: 1000,easing: 'cubic-bezier(0.5, 0, 0, 0)'});
+      // ScrollReveal().reveal('.home3__container',{origin: 'left', distance: '50%', duration: 2000,easing: 'cubic-bezier(0.5, 0, 0, 0)'});
+      // ScrollReveal().reveal('.hash-tag',{scale:.1, duration: 2000,easing: 'cubic-bezier(0.5, 0, 0, 0)'});
+      // ScrollReveal().reveal('.story__text2',{scale:1, origin: 'right', distance: '50%', duration: 2000,easing: 'cubic-bezier(0.5, 0, 0, 0)'});
+      // ScrollReveal().reveal('.story__text',{scale:1, origin: 'left', distance: '50%', duration: 2000,easing: 'cubic-bezier(0.5, 0, 0, 0)'});
+      // ScrollReveal().reveal('.story_img',{scale:.1, duration: 2000,easing: 'cubic-bezier(0.5, 0, 0, 0)'});
+
+

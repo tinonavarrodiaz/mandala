@@ -1,0 +1,9 @@
+@function img($img) {
+  @return url(#{$images-path}/#{$img});
+}
+
+%list-style{
+  list-style: none;
+  padding-left: 0;
+  margin-bottom: 0;
+}

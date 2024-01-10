@@ -1,0 +1,29 @@
+extends ../config/template
+append config
+  -pageTitle = 'Products'
+  -pageDescription = 'Tequila Mandala'
+  -pageImage = ''
+
+block main
+  section.section.products__containers-limited.limited
+    article.tequila-data#tequilaData
+      <div class="glide">
+        <div  class="glide__track" data-glide-el="track">
+          <ul class="glide__slides">
+            each bottle, i in limited
+              li.splide__slide
+                figure.limitedBottleItem(data-img=bottle.imagenBig data-name=bottle.name)
+                  img(src=bottle.imagenBig, alt=bottle.name data-img=bottle.imagenBig data-name=bottle.name data-description=`${bottle.description ? bottle.description : ''}`)
+                  figcaption(data-img=bottle.imagenBig data-name=bottle.name)=bottle.name
+          </ul>
+        </div>
+        <div class="glide__arrows" data-glide-el="controls">
+          <button style="color: #000;" class="glide__arrow glide__arrow--left" data-glide-dir="<"><</button>
+          <button style="color: #000;" class="glide__arrow glide__arrow--right" data-glide-dir=">">></button>
+        </div>
+      </div>
+            //- each bottle, i in limited
+            //-   li.splide__slide
+            //-     figure.limitedBottleItem
+            //-       img(src=bottle.imagenBig, alt=bottle.name)
+            //-       figcaption=bottle.name

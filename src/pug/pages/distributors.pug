@@ -1,0 +1,21 @@
+extends ../config/template
+append config
+  -pageTitle = 'Distributors by State'
+  -pageDescription = 'Tequila Mandala'
+  -pageImage = ''
+
+block main
+  .right.fix
+    p SIP OUR MONTHLY STORIES<br>BY STAYING CONNECTED
+  section.section.section__top.craft
+    h1.Distributors-title.wow.animate__animated.animate__fadeInUp(data-aos="fade-left") DISTRIBUTORS BY STATE
+
+  .dist-container(data-aos="fade-up")
+    each dist, i in distributorsbystate
+      .distributors
+          p.distributors__state=dist.state
+          p.distributors__name=dist.name
+          p.distributors__address=dist.address
+          p.distributors__phone=dist.phone
+          p.distributors__email
+            a(href=`mailto:${dist.email}`)= dist.email
