@@ -184,6 +184,20 @@
       "phone": "512-582-0102",
       "address": "9904 Gray Blvd, Unit D, Austin, TX 78758",
       "email": "orders@atxliquor.com"
+    },
+    {
+      "state": "Colorado",
+      "name": "CTS Distributing",
+      "phone": "407-280-5280",
+      "address": "5050 Osage St. Denver, CO 80221",
+      "email": "pauls@boutinot.com"
+    },
+    {
+      "state": "Wisconsin",
+      "name": "General Beverage Sales Co.",
+      "phone": "920-237-8331",
+      "address": "2855 Oregon St. Oshkosh, WI 54902",
+      "email": "dwittmann@genbev.com"
     }
   ]
 }

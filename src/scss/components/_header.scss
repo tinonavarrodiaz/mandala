@@ -8,7 +8,7 @@
   display: grid;
   grid-template-rows: 36px 1fr;
 
-  position: absolute;
+  position: absolute !important;
   top: 0;
   left: 0;
   color: var(--color);
@@ -68,7 +68,7 @@
   }
 }
 .nav-tequilas {
-  position: absolute;
+  position: absolute !important;
   width: 100%;
   top: 0;
   height: calc((var(--header-height) * 2) + 3em);
@@ -76,10 +76,25 @@
   background: #fff;
   padding-top: calc(var(--header-height) - 1em);
   color: var(--color);
-  transform: translateY(-100%);
-  transition: 0.5s transform;
-  &.active, &.show {
-    transform: translateY(0);
+  display: none;
+  // transform: translateY(-100%) !important;
+  // transition: 0.5s all;
+  opacity: 0 !important;
+  // visibility: hidden !important;
+  &.active,
+  &.show {
+    // top: 0 !important;
+    // transform: translateY(0) !important;
+    opacity: 1 !important;
+    // visibility: visible !important;
+    display: block;
+    top: -500px;
+    animation: sh 0.5s 0.05s forwards;
+    @keyframes sh {
+      to {
+        top: 0;
+      }
+    }
   }
 }
 .menu-tequilas {
@@ -132,7 +147,7 @@
 .buyOnline {
   border: 1px solid #fff;
   line-height: 3;
-  padding: .75em 2.5em;
+  padding: 0.75em 2.5em;
   text-transform: uppercase;
   font-size: 1.2em;
   position: relative;

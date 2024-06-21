@@ -1,4 +1,3 @@
-
 .toggle-menu {
   width: 2em;
   height: auto;
@@ -11,7 +10,7 @@
 //  align-items: center;
 //}
 
-.main-menu{
+.main-menu {
   position: static !important;
   margin-left: 5vw;
   @include edMenu(l);
@@ -21,22 +20,21 @@
   //a{
   //  text-transform: uppercase;
   //}
-  li{
-    position: static!important;
+  li {
+    position: static !important;
   }
 }
-.submenu{
-  position: absolute;
+.submenu {
+  position: absolute !important;
   width: 100vh;
   height: calc(var(--header-height) * 2);
   top: 0;
   left: 0;
   background: #fff;
-
 }
-.main-menu__link{
-  @media screen and (min-width: 1024px) and (max-width:1500px) {
-    padding: 0 .3em !important;
-    font-size: .9em;
+.main-menu__link {
+  @media screen and (min-width: 1024px) and (max-width: 1500px) {
+    padding: 0 0.3em !important;
+    font-size: 0.9em;
   }
 }

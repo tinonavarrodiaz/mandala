@@ -1,0 +1,2 @@
+gulp-minify gulp-plumber gulp-postcss gulp-pug gulp-robots gulp-sass gulp-sitemap gulp-sourcemaps gulp-tinypng gulp-typescript gulp-watch jstransformer-markdown-it node-sass
+node-sass-tilde-importer typescript vinyl-buffer vinyl-ftp vinyl-source-stream
